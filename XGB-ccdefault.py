@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("C:/Users/Braulio/Desktop/XGBoost/default of credit card clients.csv")
+df = pd.read_csv("default of credit card clients.csv")
 df.head()
 
 print(df.shape)
@@ -121,7 +121,7 @@ print("\nTest set AUC:", roc_auc_score(y_test, y_pred_proba))
 print("Classification report:\n", classification_report(y_test, y_pred))
 
 # Create monthly utilization ratios
-df = pd.read_csv("C:/Users/Braulio/Desktop/XGBoost/default of credit card clients.csv")
+df = pd.read_csv("default of credit card clients.csv")
 
 for i in range(1, 7):
     df[f'utilization_{i}'] = df[f'BILL_AMT{i}'] / df['LIMIT_BAL']
