@@ -1,0 +1,1 @@
+I evaluate the performance of XGBoost machine learning models in predicting credit card default risk. These models are trained on the [Default of Credit Card Clients dataset](https://doi.org/10.24432/C55S3H) maintained by the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/).
