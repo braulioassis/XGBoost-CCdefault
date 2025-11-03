@@ -6,7 +6,7 @@ I build XGBoost models on python using the pandas, scikit-learn, and xgboost lib
 
 ## Results
 ### Model 1
-I start with a standard XGBoost model (500 estimators, max depth of 4, learning rate of 0.05, and 80% sampling of cases and features. This model showed high overall accuracy (82%), but a low recall rate of credit card default cases (38%).
+I start with a standard XGBoost model (500 estimators, max depth of 4, learning rate of 0.05, and 80% sampling of cases and features). This model showed high overall accuracy (82%), but a low recall rate of credit card default cases (38%).
 ```
 Classification report:
                precision    recall  f1-score   support
@@ -30,8 +30,8 @@ Classification report:
    macro avg       0.68      0.71      0.69      9000
 weighted avg       0.79      0.76      0.77      9000
 ```
-Given that my objective is to correctly identify credit card default risk, I will favor the model 2 that has a higher recall rate for credit card default (true positives) than model 1 that has higher overall accuracy but higher false negatives.
+Given that my objective is to correctly identify credit card default risk, I will favor the model 2 that has a higher recall rate for credit card default (true positives) than model 1 that has higher overall accuracy but a higher false negative rate.
 
-Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I test combinations of different number of estimators, tree depths, learning rates, and subsampling of cases and features. However, hyperparameter tuning resulted in no improvement.
+Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I test combinations of different number of estimators, tree depths, learning rates, and subsampling of cases and features. However, hyperparameter tuning resulted in no improvement in the model's recall rate for credit card default.
 
-Lastly, I engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the a month's balance and the credit limit, for each of the six months data is available for. Additionally, I created an "average utilization" feature that is the average of utilization rate across the six months. While utilization rate on the first month ranked as a third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
+Lastly, I engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the customers monthly balance and their credit limit, for each of the six months data is available for. Additionally, I created an "average utilization" feature that is the average utilization rate across the six months. While utilization rate on the first month ranked as a third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
