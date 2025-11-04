@@ -35,7 +35,7 @@ Classification report:
    macro avg       0.68      0.71      0.69      9000
 weighted avg       0.79      0.76      0.77      9000
 ```
-Given that my objective is to correctly identify credit card default risk, I will favor model 2 that has a higher recall rate for credit card defaults (true positives) than model 1 that has higher overall accuracy but a higher false negative rate.
+Given that my objective is to correctly identify credit card default risk, I will favor model 2 that has a higher recall rate for credit card defaults (true positives) than model 1, which has higher overall accuracy but a higher false negative rate.
 
 Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I test combinations of different number of estimators, tree depths, learning rates, and subsampling of cases and features. However, the optimal hyperparameter tuning resulted in no improvement in the model's recall rate for credit card default.
 
