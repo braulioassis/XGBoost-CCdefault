@@ -56,3 +56,19 @@ Classification Report:
    macro avg       0.75      0.65      0.67      9000
 weighted avg       0.80      0.81      0.79      9000
 ```
+Surprisingly, the logistic regression model had an equivalent recall rate for credit card default cases than the optimal XGBoost model (63%). However, the logistic regression model had lower overall accuracy than the XGBoost model (70% vs. 76%).
+
+```
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.72      0.79      7009
+           1       0.39      0.63      0.48      1991
+
+    accuracy                           0.70      9000
+   macro avg       0.63      0.67      0.63      9000
+weighted avg       0.77      0.70      0.72      9000
+```
+
+## Conclusion
+With an XGBoost machine learning model, we were able to predict 63% of credit card default cases based on financial and demographic data.
