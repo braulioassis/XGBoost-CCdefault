@@ -40,7 +40,7 @@ Given that my objective is to correctly identify credit card default risk, I wil
 Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I test combinations of different number of estimators, tree depths, learning rates, and subsampling of cases and features. However, the optimal hyperparameter tuning resulted in no improvement on the model's recall rate for credit card default.
 
 ### Credit utilization rate
-I then engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the customers monthly balance and their credit limit, for each of the six months data is available for. Additionally, I created an "average utilization" feature that is the average utilization rate across the six months. While utilization rate on the first month ranked as a third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
+I then engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the customers' monthly balance and their credit limit, for each of the six months that data is available for. Additionally, I created an "average utilization" feature that is the average utilization rate across the six months. While utilization rate on the first month ranked as the third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
 
 ### Performance against benchmark models
 
