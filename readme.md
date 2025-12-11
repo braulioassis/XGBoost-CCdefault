@@ -3,6 +3,8 @@ My objective is to train a machine learning model that predicts credit card defa
 
 These models are trained on the [Default of Credit Card Clients dataset](https://doi.org/10.24432/C55S3H) maintained by the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/).
 
+An interactive dashboard with the most important features explaining default risk is available on [Tableau](https://public.tableau.com/app/profile/braulio.assis/viz/Dashboard_17654917331560/Dashboard1).
+
 ## Methods
 I build XGBoost models on python using the pandas, scikit-learn, and xgboost libraries, and I evaluate model performance focusing on recall rates of credit card default cases, as well as ROC-AUC scores. To visualize feature importances and ROC curves, I use matplotlib.
 
