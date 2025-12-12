@@ -44,6 +44,16 @@ Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I te
 ### Model 3: Credit utilization rate
 I then engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the customers' monthly balance and their credit limit, for each of the six months that data is available for. Additionally, I created an "average utilization" feature that is the average utilization rate across the six months. While utilization rate on the first month ranked as the third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
 
+Classification report:
+               precision    recall  f1-score   support
+
+           0       0.88      0.80      0.84      7009
+           1       0.47      0.62      0.54      1991
+
+    accuracy                           0.76      9000
+   macro avg       0.68      0.71      0.69      9000
+weighted avg       0.79      0.76      0.77      9000
+
 ![Figure 1](figures/features.png)
 Figure 1: Most important features in predicting credit card defaults.
 
