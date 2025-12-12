@@ -41,8 +41,14 @@ Given that my objective is to correctly identify credit card default risk, I wil
 
 Afterwards, I attempt to improve model 2 using hyperparameter tuning. Here, I test combinations of different number of estimators, tree depths, learning rates, and subsampling of cases and features. However, the optimal hyperparameter tuning resulted in no improvement on the model's recall rate for credit card default.
 
-### Credit utilization rate
+### Model 3: Credit utilization rate
 I then engineer a new "utilization rate" feature, hypothesizing that customers that utilize a higher proportion of their available credit would be associated with a higher risk of default. Utilization rate was calculated as the ratio of the customers' monthly balance and their credit limit, for each of the six months that data is available for. Additionally, I created an "average utilization" feature that is the average utilization rate across the six months. While utilization rate on the first month ranked as the third most important feature in the model, these modifications did not improve credit card default recall rate (62%).
+
+![Figure 1](figures/features.png)
+Figure 1: Most important features in predicting credit card defaults.
+
+![Figure 2](figures/roc.png)
+Figure 2: Receiver Operating Characteristic curve showing the trade-off between sensitivity (true positive rate) and specificity (false positive rate) across thresholds, along with the Area Under the Curve (AUC) score.
 
 ### Performance against benchmark models
 
@@ -74,3 +80,6 @@ weighted avg       0.77      0.70      0.72      9000
 
 ## Conclusion
 With an XGBoost machine learning model, we were able to predict 63% of credit card default cases based on financial and demographic data.
+
+![Figure 3](figures/dashboard.png)
+Interactive dashboard available on [Tableau](https://public.tableau.com/app/profile/braulio.assis/viz/CC-default/Dashboard1).
